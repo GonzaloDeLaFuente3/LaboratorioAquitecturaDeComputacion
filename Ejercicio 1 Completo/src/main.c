@@ -67,18 +67,22 @@ main(int argc, char* argv[])
   while (1)
     {
        // Add your code here.
-      HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12);
-      HAL_Delay(300);
-      HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_13);
-      HAL_Delay(300);
-      HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_14);
-      HAL_Delay(300);
-      HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_15);
-      HAL_Delay(300);
+	  HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12);
+	        HAL_Delay(300);
+	        HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12);
+	        HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_13);
+	        HAL_Delay(300);
+	        HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_13);
+	        HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_14);
+	        HAL_Delay(300);
+	        HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_14);
+	        HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_15);
+	        HAL_Delay(300);
+	        HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_15);
     }
 }
 void Init_GPIO_LEDS(void){
-
+	//inicializo los led
     GPIO_InitTypeDef GPIO_InitStruct;
         __HAL_RCC_GPIOD_CLK_ENABLE();
         					 //led verde    led naranja   led rojo     led azul
@@ -93,7 +97,7 @@ void Init_GPIO_LEDS(void){
 }
 void SysTick_Handler(void)
 {
-    HAL_IncTick();
+    HAL_IncTick();// para poder ver el parpadeo de los led
 }
 #pragma GCC diagnostic pop
 
