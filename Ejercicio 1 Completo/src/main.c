@@ -67,7 +67,7 @@ main(int argc, char* argv[])
   while (1)
     {
        // Add your code here.
-	  HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12);
+	  	  	HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12);
 	        HAL_Delay(300);
 	        HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12);
 	        HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_13);
